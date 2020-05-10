@@ -1,0 +1,78 @@
+<!DOCTYPE html><!--  Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 4 Author: KeenThemes Website: http://www.keenthemes.com/ Contact: support@keenthemes.com Follow: www.twitter.com/keenthemes Dribbble: www.dribbble.com/keenthemes Like: www.facebook.com/keenthemes Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes Renew Support: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project. --><html lang="en" appunwraptag=""><!-- begin::Head --><head>
+		<meta charset="utf-8">
+		<title>
+			MoreToLike | Admin
+		</title>
+		<base href="https://moretolike.com/admin/">
+		<meta name="description" content="Latest updates and statistic charts">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!--begin::Web font -->
+		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+		<script>
+			           WebFont.load({             google: {"families":["Poppins:300,400,500,600,700","Roboto:300,400,500,600,700"]},             active: function() {                 sessionStorage.fonts = true;             }           });         
+		</script>
+		
+<link href="./assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+
+		<!--end::Web font -->          <!--begin::Base Styles -->                              <!--begin::Page Vendors -->
+		<link href="./assets/vendors/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css">
+		<!--end::Page Vendors -->
+		<link href="./assets/vendors/base/vendors.bundle.css" rel="stylesheet" type="text/css">
+		<link href="./assets/demo/default/base/style.bundle.css" rel="stylesheet" type="text/css">
+		<!--end::Base Styles -->
+		<link rel="shortcut icon" href="https://moretolike.com/images/small-logo.jpg">
+		
+		<script src="//www.amcharts.com/lib/3/amcharts.js" type="text/javascript"></script>
+		<script src="//www.amcharts.com/lib/3/serial.js" type="text/javascript"></script>
+		<script src="//www.amcharts.com/lib/3/themes/light.js" type="text/javascript"></script>
+		<script src="//www.amcharts.com/lib/3/ammap.js" type="text/javascript"></script>
+		<script src="//www.amcharts.com/lib/3/pie.js" type="text/javascript"></script>
+		<script src="//www.amcharts.com/lib/3/radar.js" type="text/javascript"></script>
+		<script src="//www.amcharts.com/lib/3/amstock.js" type="text/javascript"></script>
+		<script src="//www.amcharts.com/lib/3/plugins/animate/animate.min.js" type="text/javascript"></script>
+		<script src="//www.amcharts.com/lib/3/maps/js/usaLow.js" type="text/javascript"></script>
+		<script src="//www.amcharts.com/lib/3/maps/js/worldLow.js" type="text/javascript"></script>
+		<script src="//www.amcharts.com/lib/3/maps/js/worldHigh.js" type="text/javascript"></script>
+		<script src="//www.google.com/jsapi" type="text/javascript"></script>
+		<script>
+			google.load('visualization', '1', {packages: ['corechart', 'bar', 'line']});
+		</script>
+		<script src="//maps.google.com/maps/api/js?key=AIzaSyDBGVDv5fOFgfW4ixNZL_2krgkriGu6vvc" type="text/javascript"></script>
+
+
+	<link href="https://cdn.quilljs.com/1.2.2/quill.snow.css" rel="stylesheet">
+  	<link href="https://cdn.quilljs.com/1.2.2/quill.bubble.css" rel="stylesheet">
+  	<link href="https://fonts.googleapis.com/css?family=Aref+Ruqaa|Mirza|Roboto" rel="stylesheet">
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-alpha1/katex.min.css" integrity="sha384-8QOKbPtTFvh/lMY0qPVbXj9hDh+v8US0pD//FcoYFst2lCIf0BmT58+Heqj0IGyx" crossorigin="anonymous">
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-alpha1/katex.min.js" integrity="sha384-GR8SEkOO1rBN/jnOcQDFcFmwXAevSLx7/Io9Ps1rkxWp983ZIuUGfxivlF/5f5eJ" crossorigin="anonymous"></script>
+
+
+
+	</head>
+	<!-- end::Head -->              <!-- begin::Page loader -->
+	<body class="m-page--fluid m--skin- m-content--skin-light2 m-header--fixed m-header--fixed-mobile m-aside-left--enabled m-aside-left--skin-dark m-aside-left--offcanvas m-footer--push m-aside--offcanvas-default"><div class="m-page-loader m-page-loader--base m-page-loader--non-block" style="margin-left: -80px; margin-top: -20px;">
+		<div class="m-blockui">
+			<span>
+				Please wait...
+			</span>
+			<span>
+				<div class="m-loader m-loader--brand"></div>
+			</span>
+		</div>
+	</div>
+	<!-- end::Page loader -->         <!-- end::Body -->
+	
+	
+
+	<style type="text/css">
+		ul.ui-select-choices.dropdown-menu{
+			display: block;
+		}
+		.ui-select-choices.dropdown-menu{
+			display: block;
+		}
+		</style>
+
+<script type="text/javascript" src="/js/admin/runtime.js"></script><script type="text/javascript" src="/js/admin/polyfills.js"></script><script type="text/javascript" src="/js/admin/styles.js"></script><script type="text/javascript" src="/js/admin/vendor.js"></script><script type="text/javascript" src="/js/admin/main.js"></script></body><!-- end::Body --></html>

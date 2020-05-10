@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "NoteraM2L01";
+  src:url("../fonts/NoteraM2L01.eot");
+  src:url("../fonts/NoteraM2L01.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/NoteraM2L01.woff") format("woff"),
+    url("../fonts/NoteraM2L01.ttf") format("truetype"),
+    url("../fonts/NoteraM2L01.svg#font-electro") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+

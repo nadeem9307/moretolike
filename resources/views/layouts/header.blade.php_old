@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en-US" itemscope="itemscope" itemtype="http://schema.org/WebPage">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="csrf-token" content="{{ csrf_token() }}">
+<title>More To Like &#8211; We are global</title>
+<link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.min.css')}}" media="all" />
+<link rel="stylesheet" type="text/css" href="{{asset('css/font-awesome.min.css')}}" media="all" />
+<link rel="stylesheet" type="text/css" href="{{asset('css/animate.min.css')}}" media="all" />
+<link rel="stylesheet" type="text/css" href="{{asset('css/font-electro.css')}}" media="all" />
+<link rel="stylesheet" type="text/css" href="{{asset('css/owl-carousel.css')}}" media="all" />
+<link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}" media="all" />
+<link rel="stylesheet" type="text/css" href="{{asset('css/colors/yellow.css')}}" media="all" />
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,700italic,800,800italic,600italic,400italic,300italic' rel='stylesheet' type='text/css'>
+
+<link rel="shortcut icon" href="{{asset('images/favicon.ico')}}">
+
+<script type="text/javascript" src="{{asset('js/jquery.min.js')}}"></script>
+  <script type="text/javascript" src="{{ asset('js/script.js') }}"></script>  
+   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+   <link href="/css1/push.css" rel="stylesheet">
+  <link href="/css1/application.css" rel="stylesheet">
+<!--     <link rel="stylesheet" href="/resources/demos/style.css">
+ -->    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
+    <style type="text/css">
+    .mybtn1{background-color: #fff;
+    border: 1px solid #7b7b7b !important;
+    border-radius: 8px;
+    width: 175px;}
+    .hidden{display: none;}
+    .fsizecl{color: #7d7d7d;
+    font-size: 16px; }
+    .nav-side-menu { transition: unset!important;transform: none!important; }
+    ul#categaries {
+    height: 200px;
+    overflow-y: scroll;
+    overflow-x: hidden;}
+    #categaries::-webkit-scrollbar-track
+		{
+			-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+			background-color: #F5F5F5;
+		}
+
+		#categaries::-webkit-scrollbar
+		{
+			width: 10px;
+			background-color: #F5F5F5;
+		}
+
+		#categaries::-webkit-scrollbar-thumb
+		{
+			background-color: #000000;
+			border: 2px solid #555555;
+		}
+	ul#brand_desk_menu{height: 200px;
+    overflow-y: scroll;
+    overflow-x: hidden;}
+     #brand_desk_menu::-webkit-scrollbar-track
+		{
+			-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+			background-color: #F5F5F5;
+		}
+
+		#brand_desk_menu::-webkit-scrollbar
+		{
+			width: 10px;
+			background-color: #F5F5F5;
+		}
+
+		#brand_desk_menu::-webkit-scrollbar-thumb
+		{
+			background-color: #000000;
+			border: 2px solid #555555;
+		}
+		ul#retailers{height: 200px;
+    overflow-y: scroll;
+    overflow-x: hidden;}
+     #retailers::-webkit-scrollbar-track
+		{
+			-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+			background-color: #F5F5F5;
+		}
+
+		#retailers::-webkit-scrollbar
+		{
+			width: 10px;
+			background-color: #F5F5F5;
+		}
+
+		#retailers::-webkit-scrollbar-thumb
+		{
+			background-color: #000000;
+			border: 2px solid #555555;
+		}
+		h4.shopi {
+    float: right;
+    padding-right: 60px;
+}
+.circle1{border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 100%;}
+
+    </style>
+    <script type="text/javascript">
+       function sticky_relocate() {
+        var window_top = $(window).scrollTop();
+        var div_top = $('#sticky-anchor').offset().top;
+        if (window_top > div_top) {
+          $('#sticky').addClass('stick');
+        } else {
+          $('#sticky').removeClass('stick');
+        }
+      }
+
+      $(function() {
+        $(window).scroll(sticky_relocate);
+        sticky_relocate();
+      });
+   </script>
+
+</head>
+
+<body class="page home page-template-default">
+<nav class="push-sidebar hidden" id="sidebar-left">
+
+<div class="nav-side-menu ">
+    <div class="sidebar_user">
+      <div class="brandlogo">
+        <img src="https://admin-api.moretolike.com/uploads/3d9fdffd9139b171b69d021102af2961.jpg" class="imgbrand" alt="nbvnvbn" align="right;">
+      </div>
+      <div class="name_user">
+        <p>Shyam Raj Verma</p>
+        <a href="#">Logout</a>
+      </div>
+    </div>       
+    <form class="form-horizontal">
+      <div class="form-group">
+        <div class="col-sm-12">
+          <div class="input-group">
+            <span ><i class="fa fa-search"></i></span>
+            <input id="msg" type="text" class="form-control" name="msg" placeholder="Search....." >
+          </div>
+        </div>
+      </div>
+    </form>
+    <div class="menu-list">
+            <ul id="menu-content" class="menu-content">
+              
+                <li data-toggle="collapse" data-target="#service" >
+                  <a href="#"><b>MENU</b> <span class="arrow"></span></a>
+                </li>  
+                <ul class="sub-menu collapse in" aria-expanded="true" id="service">
+                  <li><a href="/my-notifications"><i class="fa fa-bell"> <span class="value3">0</span></i> Notification</a></li>
+                  <li><a href="/store-list"><i class="fa fa-shopping-cart"></i> My Store</a></li>
+                 <li><a href="my-likes"><i class="ec ec-favorites"></i> My Loved Products</a></li>
+                <li><a href="/compare"><i class="ec ec-compare">
+            @if($compare_count > 0)
+              <span class="value1 compare_added">{{$compare_count}}</span>
+            @else
+              <span class="value1 compare_added hidden">{{$compare_count}}</span>
+            @endif
+          </i> Compare</a></li>
+                </ul>
+
+
+                <li data-toggle="collapse" data-target="#new" class="collapsed">
+                  <a href="#"><b>SHOW</b> <span class="arrow"></span></a>
+                </li>
+                <ul class="sub-menu collapse" id="new">
+                  <li><a href="#">All</a></li>
+                  <li><a href="#">New In</a></li>
+                  <li><a href="#">On Sale</a></li>
+                  <li><a href="#">Exploare</a></li>
+                  <li><a href="#">Stores</a></li>
+                  <li><a href="#">People</a></li>
+                  <li><a href="/my-blog">Blog</a></li>
+                </ul>
+                 <li data-toggle="collapse" data-target="#categaries" class="collapsed">
+                  <a href="#"><b>CATEGARIES</b> <span class="arrow"></span></a>
+                </li>
+                <ul class="sub-menu collapse" id="categaries">
+	                   <div class="row" style="border-bottom: 1px solid #d6d6d6; padding: 5px;"> 
+	                    <div class="col-xs-12">
+	                  <form>
+	              <div class="input-group">
+	                <span style="position: absolute; top: 1px;left: 7px; color:#bfbfbf; font-size: 13px; ">
+	                  <i class="fa fa-search"></i>
+	                </span>
+	                <input id="msg" type="text" class="form-control" name="msg" placeholder="Search categaries..." style="padding-left: 40px; padding-left: 24px;border-radius: 3px;width: 227px; ">
+			              </div>
+			            </form>
+				    </div> 
+				     </div>
+	                  <li>All</li>
+	                  @foreach($sub_category as $row)
+	                  <li> <input type="checkbox" >  <a href="/category-product/{{$row->id}}">{{$row->name}}</a></li>
+	                  @endforeach
+	                </ul>
+                 <li data-toggle="collapse" data-target="#brand_desk_menu" class="collapsed">
+                  <a href="#"><b>BRAND</b> <span class="arrow"></span></a>
+
+                </li>
+               
+                <ul class="sub-menu collapse" id="brand_desk_menu">
+                   <div class="row" style="border-bottom: 1px solid #d6d6d6; padding: 5px;"> 
+                    <div class="col-xs-12">
+                  <form>
+              <div class="input-group">
+                <span style="position: absolute; top: 1px;left: 7px; color:#bfbfbf; font-size: 13px; ">
+                  <i class="fa fa-search"></i>
+                </span>
+                <input id="msg" type="text" class="form-control" name="msg" placeholder="Search Brands..." style="padding-left: 40px; padding-left: 24px;border-radius: 3px;width: 227px; ">
+              </div>
+            </form>
+    </div> 
+     </div>
+                  <li>All</li>
+                  @foreach($brand_carousel as $row)
+                  <li> <input type="checkbox">  <a href="/category-product/1">{{$row->name}}</a></li>
+                  @endforeach
+                </ul>
+                 <li data-toggle="collapse" data-target="#retailers" class="collapsed">
+                  <a href="#"><b>RETAILERS</b> <span class="arrow"></span></a>
+                </li> 
+                <ul class="sub-menu collapse" id="retailers">
+                   <div class="row" style="border-bottom: 1px solid #d6d6d6; padding: 5px;"> 
+                   
+                    <div class="col-xs-12">
+      <form>
+            
+              <div class="input-group">
+                <span style="position: absolute; top: 1px;left: 7px; color:#bfbfbf; font-size: 13px; ">
+                  <i class="fa fa-search"></i>
+                </span>
+                <input id="msg" type="text" class="form-control" name="msg" placeholder="Search Retailers..." style="padding-left: 40px; padding-left: 24px;border-radius: 3px;width: 227px; ">
+              </div>
+            </form>
+    </div> 
+     </div>
+                  <li> <input type="checkbox">  ARMANI</li>
+                  <li> <input type="checkbox"> ASOS</li>
+                  <li><input type="checkbox"> BROWN</li>
+                  <li><input type="checkbox"> BURBERRY</li>
+                  <li><input type="checkbox"> CLUCB MONACO</li>
+                  <li><input type="checkbox"> COACH</li>
+                  <li><input type="checkbox"> GOGGLES
+                    <div class="clearfix"></div>
+                      <div class="row app-aply">
+                        <div class="col-xs-1"></div>
+                          <div class="col-xs-10"><button class="mybtn1">APPLY</button></div>
+                      </div> </li>
+                 </ul> 
+
+                 <li data-toggle="collapse" data-target="#price" class="collapsed">
+                  <a href="#"><b>PRICE</b> <span class="arrow"></span></a>
+                </li> 
+                 <ul class="sub-menu collapse" id="price">
+                  <div class="row">
+                        <div class="col-xs-1"></div>
+                          <div class="col-xs-10">
+                              
+                        
+                            <input type="range" class="form-control">
+           
+                          </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-1"></div>
+                          <div class="col-xs-10"><!-- <button class="mybtn1">APPLY</button> --></div>
+                      </div>
+                 
+                </ul>
+                 <li data-toggle="collapse" data-target="#customer" class="collapsed">
+                  <a href="#"><b>CUSTOMER SERVICE</b> <span class="arrow"></span></a>
+                </li> 
+                  <ul class="sub-menu collapse" id="customer">
+                  <li>Information</li>
+                  <li>About Us</li>
+                  <li>F.A.Q.</li>
+                  <li>Video Tutorials/Walkthroughs</li>
+                 
+                </ul>
+
+
+
+            </ul>
+     </div>
+
+</div>
+</div> 
+  
+</nav>
+
+<section class="canvas" id="canvas">
+	<div id="page" class="hfeed site"> 
+    <a class="skip-link screen-reader-text" href="#site-navigation">Skip to navigation</a> 
+    <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+  <div class="top-bar hidden-md-down top-container">
+    <div class="container-fluid">
+      <nav>
+        <ul id="menu-top-bar-left" class="nav nav-inline pull-left animate-dropdown flip">
+          <li class="menu-item animate-dropdown"><a  href="{{getenv('APP_URL')}}">Moretolike.com - Your online shopping experience - Download our App &nbsp;  <i class="fa fa-apple"></i><i class="fa fa-android"></i></a> </li>
+        </ul>
+      </nav>
+      <nav>
+        <ul id="menu-top-bar-right" class="nav nav-inline pull-right animate-dropdown flip">
+          <!--New-->
+
+          <li class="menu-item animate-dropdown"><a title="Store Locator" href="/my-collections"><span class="topic"><img src="https://moretolike.com/images/add-clooection.png" style="width: 15px;"></span> My Collection</a></li>
+
+          <li class="menu-item animate-dropdown">
+            <a title="Store Locator" href="/my-likes">
+            <i class="ec ec-favorites"></i> My Loved Products</a></li>
+
+          <li class="menu-item animate-dropdown"><a title="Compare" href="/compare"><i class="ec ec-compare">
+            @if($compare_count > 0)
+              <span class="value1 compare_added">{{$compare_count}}</span>
+            @else
+              <span class="value1 compare_added hidden">{{$compare_count}}</span>
+            @endif
+          </i> Compare</a></li>
+
+        
+          <li class="menu-item animate-dropdown"><a title="Shop" href="/my-notifications">
+            <i class="fa fa-bell">  <!-- <span class="value1">0</span> --></i> Notification</a></li>
+
+          @if(Session::get('user_id'))
+          
+          
+          <li class="menu-item dropdown" style="cursor: pointer;">
+              <a class="dropdown-toggle" type="button" data-toggle="dropdown">My Account - {{Session::get('f_name')}}
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li class="lable"><a href="{{url('/customer')}}">My Account</a></li>
+                <li class="lable"><a href="{{url('/my-profile')}}">My Profile</a></li>
+              </ul>
+          </li>
+
+          <li class="menu-item animate-dropdown"><a title="Shop" href="/logout" ><i class="ec ec-logout"></i>Logout</a></li>
+              @else
+                 <li class="menu-item animate-dropdown"><a title="Shop" id="login" href="#" data-toggle="modal" data-target="#myModal"><i class="ec ec-shopping-bag"></i>Register Or Sign in</a></li>
+              @endif
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <!-- /.top-bar --> 
+
+         	
+           
+
+        <!--   @if (session('alert'))
+             <b> <div id="alert" style="text-align:center;color: red"  class="alert alert-success">
+                  {{ session('alert') }}
+              </div></b>
+          @endif -->
+
+    </div>
+      </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+   <div class="row hidden-md-down">
+        <div class="col-sm-4"></div>
+         <div class="col-sm-4"> <a href="/"><img src="/images/logo-moretolike.png" alt="" /></a> </div>
+      </div>
+  <!-- Model Close-->
+   <div id="sticky-anchor"></div>
+   
+    <div class="navbardiv" id="sticky">
+        <nav class="stickyheader">
+      <div class="container-fluid">
+
+          <div class="row">
+             <div class="col-xs-2 brdrigt"><a href="#"><i class="fa fa-user iconcs" ></i></a></div> 
+             <div class="col-xs-2 brdrigt"><div class="btn-group dropup">
+            <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button"> <i class="fa fa-search iconcs" ></i></a>
+          <div class="dropdown-menu togalia" >
+              <form class="navbar-form" role="search">
+              <div class="input-group add-on">
+                <input class="form-control" placeholder="Search" name="srch-term" id="srch-term" type="text">
+                <div class="input-group-btn">
+                  <button class="btn btn-default btnheght" type="submit"><i class="fa fa-search"></i></button>
+                </div>
+              </div>
+              </form>
+            </div>
+          </div></div> 
+          <div class="col-xs-2"><a href="#"><i class="ec ec-shopping-bag iconcs"></i></a> <span class="abs"><p>0</p></span></div>
+          <div class="col-xs-2 brdrigt"><a href="#"><i class="ec ec-favorites iconcs" ></i></a> <span class="abs"><p>0</p></span></div> 
+             <div class="col-xs-2 brdrigt"><a href="/compare" class="nav-link"><img src="https://moretolike.com/images/add-clooection.png" style="margin-top: 2px; width: 15px;"></a> <span class="abs"><p>0</p></span></div> 
+            
+            <div class="col-xs-2 brdrigt"><a href="#"><i class="ec ec-compare iconcs" ></i></a><span class="abs"><p>0</p></span></div>
+           
+          </div>
+         
+      </div>
+   </nav>
+ </div>
+  <!--model 2-->
+  <header id="myHeader" class="site-header header header-v1">
+    
+    <div class="container-fluid hidden-md-down ">
+    	<!--karan-->
+		 
+    	<!---karan-->
+      <div class="row"> 
+        <div class="col-sm-2"></div>
+       <div class="primary-nav animate-dropdown col-sm-8">
+                         <div class="clearfix">
+                                 <button class="navbar-toggler hidden-sm-up pull-right flip" type="button" data-toggle="collapse" data-target="#default-header">
+                                        &#9776;
+                                 </button>
+                            </div>
+
+                            <div class="collapse navbar-toggleable-xs" id="default-header">
+                                <nav>
+                                    <ul id="menu-main-menu" class="nav nav-inline yamm">
+                                    
+                                       <li class="menu-item animate-dropdown"><a title="" href="#">
+                                         <img src="/images/small-logo.jpg" width="40" alt="" >
+                                       </a> </li>
+                                       <li class="menu-item animate-dropdown">
+                                        <nav class="app-navbar">
+                                          <span class="" data-toggle="push" data-target="#sidebar-left" data-distance="250" title="Open left navigation" style="color: black;">
+                                             <i class="fa fa-bars fsizecl"></i>
+                                             <i class="fa fa-times hidden" ></i>
+                                             <a title="Menu" href="javascript:void(0)" style="font-weight: bold; color: #7d7d7d">Menu</a>
+                                             </span> 
+                                           
+                                          </nav>
+                                       </li>
+                                        <li class="menu-item menu-item-has-children animate-dropdown dropdown ham-menu-left">
+                                           <!--  <ul role="menu" class=" dropdown-menu">
+                                                <li class="menu-item animate-dropdown  "><a title="Home v1" href="home.html">Home v1</a></li>
+                                                <li class="menu-item current-menu-item current_page_item animate-dropdown active"><a title="Home v2" href="home-v2.html">Home v2</a></li>
+                                                <li class="menu-item animate-dropdown  "><a title="Home v3" href="home-v3.html">Home v3</a></li>
+                                            </ul> -->
+                                        </li>
+                                        <li class="menu-item animate-dropdown"><a title="Explore" href="#">Explore</a></li>
+                                         <li class="menu-item animate-dropdown"><a title="Shop" href="#">Shop</a></li>
+                                          <li class="menu-item animate-dropdown"><a title="People" href="#">People</a></li>
+                                           <li class="menu-item animate-dropdown"><a title="Stores" href="#">Stores</a></li>
+                                            <li class="menu-item animate-dropdown"><a title="My Collection" href="/my-collections">Collection</a></li>
+                                            <li class="menu-item animate-dropdown"><a title="Brands" href="#">Brands</a></li>
+                                            <li class="menu-item animate-dropdown"><a title="Blog" href="/my-blog">Blog</a></li>
+                                       
+                                            <li class="menu-item menu-item-has-children animate-dropdown dropdown">
+                                              <a href="#"  data-toggle="dropdown"  > <i class="ec ec-search serch"></i> </a>
+                                             <ul role="menu" class=" dropdown-menu ">
+                                              <div class="arrow-up"></div>
+                                                <li class="menu-item animate-dropdown ">
+                                                  <input type="" class="src " placeholder="Search for Product...." name="">
+                                                </li>
+                                            </ul>
+
+                                            </li>
+                                     
+                                       
+                                      
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+
+                          <div class="col-sm-2">
+                          <ul class="navbar-mini-cart navbar-nav animate-dropdown nav flip cart_anchor" id="cart_content_top">
+                                          <li class="nav-item dropdown {{count($cart) > 0 ? 'open' : ''}}" id="open_cart_menu"> <a href="javascript:void(0)" class="nav-link" data-toggle="dropdown"> <i class="ec ec-shopping-bag"></i> <!-- <span class="cart-items-count count" >{{$getTotlaQty}}</span> --> <span class="cart-items-total-price total-price"><span class="amount amount_total">&#36;{{$getSubTotal}}</span></span> </a>
+                                            <ul class="dropdown-menu dropdown-menu-mini-cart">
+                                              <li><i class="fa fa-times circle1"></i> <h4 class="shopi">SHOPPING BAG</h4></li>
+                                              <li>
+                                                <li><hr></li>
+                                                <div class="widget_shopping_cart_content" >
+                                                  <ul class="cart_list product_list_widget " >
+                                                    @foreach($cart as $key=>$cart)
+                                                    <li class="mini_cart_item" > <a title="Remove this item" class="remove" href="javascript:void(0)" onclick="removeCart({{$cart->id}},{{$cart->quantity}},{{$cart->price}},{{$getTotlaQty}},{{$getSubTotal}})" id="{{$cart->id}}">×</a> <a href="javascript:void(0)"> <img class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" src="{{getenv('URL')}}{{$cart->attributes['img']}}" alt="">{{$cart->name}}&nbsp; </a> <span class="quantity">{{$cart->quantity}} × <span class="amount amount_total">{{$cart->price}}</span></span> </li>
+                                                    @endforeach
+                                                  </ul>
+                                                  <!-- end product list -->
+                                                  
+                                                  <p class="total"><strong>Subtotal:</strong> <span class="amount amount_total">${{Cart::getSubTotal()}}</span></p>
+
+                                                  <p class="buttons">
+                                                 <!--   <a class="button btnforall wc-forward" href="/cart">View Cart</a> -->
+                                                     @if($session != '')
+                                                    <a class="button checkout wc-forward" href="/checkout">Proceed to Checkout</a>
+                                                    @else 
+                                                    <a href="javascript:void(0)" data-toggle="modal" data-target="#myModal"  rel="nofollow" class="button checkout wc-forward">Proceed to Checkout</a>
+                                                    @endif
+                                                   </p>
+                                                </div>
+                                              </li>
+                                            </ul>
+                                          </li>
+                                        </ul>
+
+</div> 
+      </div>
+   
+
+      <!-- /.row -->
+   

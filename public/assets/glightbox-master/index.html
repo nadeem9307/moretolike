@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/glightbox.css">
+  <script src="js/codemirror.js"></script>
+
+  <title>GLightbox | A touchable pure Javascript lightbox</title>
+</head>
+
+<body>
+ 
+
+  <!-- Simple images example -->
+  
+
+
+  <!-- Images with description example -->
+  <section class="section pair">
+    <div class="wrap">
+      <h3><i class="fa fa-address-card heading-icon" aria-hidden="true"></i>Images with Description</h3>
+      <p>You can add descriptions to your slides, the description position can be set globally for all slides or you
+        can set
+        a different position for each slide. options are: top, bottom, left or right. You can
+        adjust the style the way you want with basic CSS. <strong>The description can display html code</strong>.</p>
+
+      <div class="clear"></div>
+
+      <ul class="box-container three-cols">
+        <li class="box">
+          <a href="img/large/gm7.jpg" class="glightbox2" data-glightbox="title:Description Bottom; description: You can set the position of the desciption">
+            <img src="img/small/gm7.jpg" alt="image">
+          </a>
+        </li>
+        <li class="box">
+          <a href="img/large/gm8.jpg" class="glightbox2" data-glightbox="title: Description Right; descPosition: right;">
+            <img src="img/small/gm8.jpg" alt="image">
+            <p>sbajdbsjknskjcnk</p>
+            <div class="glightbox-desc">
+              <p>You can set the position of the desciption in different ways for example top, bottom, left or right</p>
+              <p>Duis quis ipsum vehicula eros ultrices lacinia. Vestibulum ante ipsum primis in faucibus orci luctus
+                et ultrices posuere
+                cubilia Curae Duis quis ipsum vehicula eros ultrices lacinia. Vestibulum ante ipsum primis in faucibus
+                orci luctus et ultrices posuere</p>
+            </div>
+          </a>
+        </li>
+        <li class="box">
+          <a href="img/large/gm9.jpg" class="glightbox2" data-glightbox="title: Description Left; descPosition: left;">
+            <img src="img/small/gm9.jpg" alt="image">
+            <div class="glightbox-desc">
+              <p>You can set the position of the desciption in different ways for example top, bottom, left or right</p>
+              <p>Duis quis ipsum vehicula eros ultrices lacinia. Vestibulum ante ipsum primis in faucibus orci luctus
+                et ultrices posuere
+                cubilia Curae</p>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+
+  <script src="js/glightbox.min.js"></script>
+  <script src="js/site.js"></script>
+  <script>
+    var lightbox = GLightbox();
+    var lightboxDescription = GLightbox({
+      selector: 'glightbox2'
+    });
+  </script>
+</body>
+
+</html>

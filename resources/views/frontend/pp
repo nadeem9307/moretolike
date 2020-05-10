@@ -1,0 +1,212 @@
+@include('frontend/include/header')
+ </div>
+ <hr>
+<div class="container content mrgtp">
+  <div class="row">
+    <ul class="top-link">
+      <li><a href="">Home</a></li>
+      <li><i class="fa fa-angle-right"></i></li>
+       <li><a href="" class="top-link-btn">My Order</a></li>
+       <li><i class="fa fa-angle-right"></i></li>
+        <li><a href="">{{$data['order_no']}} </a></li>
+      
+      
+    </ul>
+  </div>
+  
+  
+  <!--Order Summary-->
+   <div class="row Summary-cl brd">
+
+              <div class="col-md-5 col-sm-12 border-right">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+                      <tr>
+                      <td><strong>ORDER DETAILS</strong></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Order ID </strong></td>
+                       <td>{{$data['order_details'][0]->order_no}} <br>
+                       ({{count($data['order_details'])}} items) </td>
+                    </tr>
+                    <tr>
+                      <td><strong>Order Date </strong></td>
+                      <td><?php  $deliver_date =  date('D d F, Y', strtotime($data['order_details'][0]->order_date)) ;?>
+                            {{ $deliver_date}}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><strong>Total Amount </strong></td>
+                      <td>${{ $data['order_details'][0]->total_amount }} + Shipping Charge $300 through COD</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="col-md-4 col-sm-12 border-right">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tbody>
+                    <tr>
+                      <td><strong>ADDRESS</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>{{ $data['order_details'][0]->billing_phone }}  {{ $data['order_details'][0]->billing_company }}   </strong></td>
+                    </tr>
+                    <tr>
+                        <td> {{ $data['order_details'][0]->billing_address_1 }}  {{ $data['order_details'][0]->billing_address_2 }} {{ $data['order_details'][0]->billing_city }}  {{ $data['order_details'][0]->billing_postcode }}  {{ $data['order_details'][0]->billing_postcode }}  {{ $data['order_details'][0]->country_name }}</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Phone</strong> {{ $data['order_details'][0]->billing_phone }} &nbsp;&nbsp;&nbsp; {{ $data['order_details'][0]->billing_company }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="col-md-3 col-sm-12 ">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tbody>
+                    <tr>
+                    <td><strong>MANAGE ORDER</strong></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#" class="rquest"><i class="fa fa-file-pdf-o"></i> REQUEST INVOICE</a> </td>
+                    </tr>
+                    <tr>
+                      <td><a href="#" class="rquest"><i class="fa fa-question-circle" aria-hidden="true"></i> NEED HELP</a> </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div> 
+
+            </div>
+            <div class="clearfix"></div>
+            @foreach($data['order_details'] as $order_details1)
+                <?php $attributes = json_decode($order_details1->product_attributes); ?>
+                <div class="row Summary-cl brd">
+                    <div class="col-md-3 col-sm-12 border-right">
+                           <div class="row">
+                            <div class="col-sm-5 imageorder">
+                                <div class="imagebox">
+                                    <img src="{{getenv('URL')}}{{$attributes->img}}" alt="" />
+                                </div>
+                            </div>
+                            <div class="col-sm-7 textorder">
+                                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td>
+                                        {{$order_details1->product_name}}
+                                         @if(isset($attributes->color))
+                                          Color: <input type="color" id="body" name="color" value="{{$attributes->color}}" disabled="" /> 
+                                          @endif
+                                          @if(isset($attributes->size))
+                                          Size: S
+                                          @endif
+                                        </td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td>Seller: {{$order_details1->f_name}} {{$order_details1->l_name}}</td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td><a href="/product-details/{{$order_details1->slug}}">Know more</a></td>
+                                    </tr>
+                                    
+                                  </table>
+                           
+                            </div>
+                             <p class="truckde"><?php  $deliver_date =  date('D d F, Y', strtotime($order_details1->deliver_date)) ;?>
+                    <i class="fa fa-truck" aria-hidden="true"></i> Delivered on {{ $deliver_date }}</p>
+                           </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 border-right">
+                        
+                    
+                            <div class="row multistep" style="margin: auto;">
+                                    <div class="col-xs-3 multistep-step complete hoverWrapper">
+                                        <div class="text-center multistep-stepname ">Ordered  </div>
+                                        <div class="progress"><div class="progress-bar"></div></div>
+                                        <a href="#" class="multistep-dot"></a>
+                                        <div id="hoverShow1">
+                                            <ul class="delivery">
+                                             <li><i class="fa fa-angle-right"></i> Mon, 31st Oct 9:35 am</li>
+                                              <li><i class="fa fa-angle-right"></i> Tue, 31st Oct 9:35 am</li>
+                                               <li><i class="fa fa-angle-right"></i> Wed, 31st Oct 9:35 am</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-3 multistep-step current hoverWrapper">
+                                        <div class="text-center multistep-stepname ">Packed </div>
+                                        <div class="progress"><div class="progress-bar"></div></div>
+                                        <a href="#" class="multistep-dot"></a>
+                                        <div id="hoverShow1">
+                                            <ul class="delivery">
+                                             <li><i class="fa fa-angle-right"></i> Thu, 31st Oct 9:35 am</li>
+                                              <li><i class="fa fa-angle-right"></i> Fri, 31st Oct 9:35 am</li>
+                                               <li><i class="fa fa-angle-right"></i> Sat, 31st Oct 9:35 am</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-3 multistep-step next hoverWrapper">
+                                        <div class="text-center multistep-stepname ">Shipped </div>
+                                        <div class="progress"><div class="progress-bar"></div></div>
+                                        <a href="#" class="multistep-dot"></a>
+                                        <div id="hoverShow1">
+                                            <ul class="delivery">
+                                             <li><i class="fa fa-angle-right"></i> Mon, 31st Oct 9:35 am</li>
+                                              <li><i class="fa fa-angle-right"></i> Tue, 31st Oct 9:35 am</li>
+                                               <li><i class="fa fa-angle-right"></i> Wed, 31st Oct 9:35 am</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-3 multistep-step disabled hoverWrapper">
+                                        <div class="text-center multistep-stepname ">Delivered </div>
+                                        <div class="progress"><div class="progress-bar"></div></div>
+                                        <a href="#" class="multistep-dot"></a>
+                                        <div id="hoverShow1">
+                                            <ul class="delivery">
+                                             <li><i class="fa fa-angle-right"></i> Sun, 1st Nov 9:35 am</li>
+                                              <li><i class="fa fa-angle-right"></i> Sun, 1st Nov 9:35 am</li>
+                                               <li><i class="fa fa-angle-right"></i> Sun, 1st Nov 9:35 am</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                            </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 ">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                            <td><strong>$ {{ $order_details1->product_price }}</strong></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#" class="rquest"><i class="fa fa-star"></i> REQUEST INVOICE</a> </td>
+                            </tr>
+                             <tr>
+                                <td><a href="#" class="rquest"><i class="ec ec-compare"></i>  RETURN</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="#" class="rquest"> <i class="fa fa-question-circle" aria-hidden="true"></i> NEED HELP</a> </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                    </div> 
+                   
+                </div>
+            @endforeach
+  
+</div>
+      @include('frontend/include/footer')
+
+
+
+
+
+
+
+
+
+

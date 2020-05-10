@@ -1,0 +1,4 @@
+product_id,slug,sku,product_name,availability,actual_price,mrp,current_price,stock_quantity,total_stock_quantity,description,specification,product_details,product_img,user_id,brand_id,discount_type,discount,discount_display_type,shareable_product,status,deleted_status,admin_commission_type,admin_commission,vendor_commission_type,vendor_commission,product_state,country,created_date,updated_date,max_order_qty
+,test,256369,test,in stock,0,56,10,0,0,test descriptions,,test details,5df614ad3bcccdb96415b3cef2c0edbf.jpg,1,1,,0,,non shareable,Active,Not deleted,,,,,,,2018-06-19,2018-07-31 07:38:11,0
+,test,256370,test,in stock,1,57,11,1,1,test descriptions,,test details,6df614ad3bcccdb96415b3cef2c0edbf.jpg,2,2,,1,,non shareable,Active,Not deleted,,,,,,,2018-06-18,2018-07-31 07:38:12,1
+,test,256371,test,in stock,2,58,12,2,2,test descriptions,,test details,7df614ad3bcccdb96415b3cef2c0edbf.jpg,3,3,,2,,non shareable,Active,Not deleted,,,,,,,2018-06-17,2018-07-31 07:38:13,2
